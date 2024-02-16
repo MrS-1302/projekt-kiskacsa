@@ -1,10 +1,16 @@
 :root {
-    --bg-color: #00bbdc;
-    /*--bg-line-1-color: #69f0d8;
-    --bg-line-2-color: #606E70;
-    --bg-lines: 4;*/
+    --color: black;
+    --bg-color: #fd7e14;
+    --bg-line-1-color: #0000ff;
+    --bg-line-2-color: #ffffff;
+    --bg-lines: 0;
+
+    /* 
+    --color: white;
+    --bg-color: #2b2b2b;
     --bg-line-1-color: black;
-    --bg-lines: 4;
+    --bg-line-2-color: white;
+    --bg-lines: 4; */
 }
 
 .bgParent {
@@ -21,4 +27,8 @@
     width: 20px;
     display: block;
     position: fixed;
+}
+
+main {
+    color: var(--color);
 }

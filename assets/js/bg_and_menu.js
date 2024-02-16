@@ -21,18 +21,24 @@ window.addEventListener('DOMContentLoaded', async () => {
     bg = document.createElement('div');
     bg.className = 'bgParent';
     document.body.appendChild(bg);
-/* 
-    for (a = 0; a < Math.floor(bgLineColors.find(item => item.name === '--bg-lines').value / (bgLineColors.length - 1)); a++) {
+
+     for (a = 0; a < Math.floor(bgLineColors.find(item => item.name === '--bg-lines').value / (bgLineColors.length - 1)); a++) {
         for (b = 0; b < bgLineColors.length - 1; b++) {
             line = document.createElement('div');
             line.className = 'lines';
             line.style.backgroundColor = bgLineColors[b].value;
             line.style.height = window.innerWidth * 2 + 'px';
-            szam = Math.floor(Math.random() * 100);
+            szam = Math.floor(Math.random() * 180);
             line.style.transform = 'rotate(' + szam + 'deg)';
-            line.style.left = szam + '%';
-            line.style.top = szam + '%';
+            line.style.left = Math.floor(Math.random() * (80 - 20 + 1) + 20) + '%';
+            line.style.top = window.innerWidth / 1.5 * -1 + 'px';
             document.querySelector('.bgParent').appendChild(line);
         }
-    } */
+    }
 });
+
+async function redirection(url, title) {
+    document.querySelector('main').innerHTML = await httpGet(url);
+    document.querySelector('.menu-btn').click()
+    document.title = 'Gábor Dénes Óvoda, Általánis Iskola, Gimnázium és Technikum | ' + title
+}
