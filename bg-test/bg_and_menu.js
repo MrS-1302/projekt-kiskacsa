@@ -1,6 +1,6 @@
 /*
     Ez a js kód felel a háttér és menü létrehozásáért.
-    Azért van erre szükség, hogy ne keljen minden új oldalnál beágyazni és, hogy csak egyszer kelljen módosítani azokat ha kell.
+    Azért van erre szükség, hogy ne kelljen minden új oldalnál beágyazni és, hogy csak egyszer kelljen módosítani azokat ha kell.
 */
 
 window.addEventListener('DOMContentLoaded', async () => {
