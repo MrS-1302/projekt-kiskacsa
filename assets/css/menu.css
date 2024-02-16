@@ -1,7 +1,6 @@
-.menuParent .wrapper{
+.menuParent .wrapper {
   position: fixed;
   top: 0;
-  /*left: -100%;*/
   right: -100%;
   height: 100%;
   width: 100%;
@@ -13,17 +12,18 @@
   font-family: 'Lato', sans-serif;
   font-family: 'Oswald', sans-serif;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: safe center;
+  justify-content: safe center;
   flex-direction: column;
   user-select: none;
+  overflow: auto;
 }
 
-.menuParent #active:checked ~ .wrapper{
+.menuParent #active:checked ~ .wrapper {
   right:0;
 }
 
-.menuParent .menu-btn{
+.menuParent .menu-btn {
   position: absolute;
   z-index: 2;
   right: 20px;
@@ -40,7 +40,7 @@
 
 .menuParent .menu-btn span,
 .menuParent .menu-btn:before,
-.menuParent .menu-btn:after{
+.menuParent .menu-btn:after {
     content: "";
     position: absolute;
     top: calc(50% - 1px);
@@ -49,10 +49,10 @@
     border-bottom: 2px solid #fff;
     transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-.menuParent .menu-btn:before{
+.menuParent .menu-btn:before {
   transform: translateY(-8px);
 }
-.menuParent .menu-btn:after{
+.menuParent .menu-btn:after {
   transform: translateY(8px);
 }
 
@@ -76,7 +76,7 @@
   transform: rotate(-45deg);
   border-color: #fff;
 }
-.menuParent .wrapper  a{
+.menuParent .wrapper div{
   text-decoration: none;
   font-size: 30px;
   font-weight: 500;
@@ -89,25 +89,25 @@
   transition: all 0.3s ease;
   transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-.menuParent input[type="checkbox"]{
+.menuParent input[type="checkbox"] {
   display: none;
 }
 
-.menuParent #active:checked ~ .wrapper a{
+.menuParent #active:checked ~ .wrapper div {
   opacity: 1;
 }
 
-.menuParent .wrapper a{
+.menuParent .wrapper div {
   transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
   transform: translateX(100px);
 }
 
-.menuParent .wrapper a:hover {
+.menuParent .wrapper div:hover {
   color: #9a9a9a;
 }
 
-.menuParent #active:checked ~ .wrapper a{
+.menuParent #active:checked ~ .wrapper div {
     transform: none;
-    transition-timing-function: ease, cubic-bezier(.1,1.3,.3,1); /* easeOutBackを緩めた感じ */
+    transition-timing-function: ease, cubic-bezier(.1,1.3,.3,1);
     transition-delay: .6s;
 }
