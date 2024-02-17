@@ -21,3 +21,6 @@ main {
     background: #fff; 
     border-radius: 5px;
 }
+.logo{
+    background-image: url(asssets/img/logo.png);
+}
