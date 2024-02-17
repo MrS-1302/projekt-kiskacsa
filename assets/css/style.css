@@ -1,3 +1,23 @@
+:root {
+    --color: black;
+    --bg-color: #fd7e14;
+}
+
 html, body {
     height: 100%;
+    background-color: var(--bg-color) !important;
+}
+
+main {
+    color: var(--color);
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff; 
+    border-radius: 5px;
 }
