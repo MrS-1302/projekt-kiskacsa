@@ -17,6 +17,7 @@
   flex-direction: column;
   user-select: none;
   overflow: auto;
+  z-index: 4;
 }
 
 .menuParent #active:checked ~ .wrapper {
@@ -25,7 +26,7 @@
 
 .menuParent .menu-btn {
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   right: 20px;
   top: 20px;
   height: 50px;
