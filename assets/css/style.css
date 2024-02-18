@@ -1,6 +1,6 @@
 :root {
-    --color: black;
-    --bg-color: #fd7e14;
+    --color: rgb(255, 255, 255);
+    --bg-color: #212121;
 }
 
 html, body {
@@ -12,6 +12,27 @@ main {
     color: var(--color);
 }
 
+footer {
+    background-color: black;
+    color: #808B88;
+    font-size: small;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+a:link {
+    color:#808B88; text-decoration: none;
+}
+a:visited {
+    color: #808B88;; text-decoration: none;
+}
+a:hover {
+    color:#ffff; text-decoration: none;
+}
+a:active {
+    color:#7476b4; text-decoration: none;
+}
+
 /* custom scrollbar */
 ::-webkit-scrollbar {
     width: 7px;
@@ -21,6 +42,17 @@ main {
     background: #fff; 
     border-radius: 5px;
 }
-.logo{
+/*+CSS*/
+.logo {
     background-image: url(asssets/img/logo.png);
+}
+
+.kezdoH1 {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.felviD {
+    padding-top: 30px;
 }

@@ -103,7 +103,7 @@
 }
 
 .menuParent .wrapper div:hover {
-  color: #9a9a9a;
+  color: #fd7e14;
 }
 
 .menuParent #active:checked ~ .wrapper div {
