@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --color: rgb(255, 255, 255);
     --bg-color: #212121;
@@ -6,6 +8,7 @@
 html, body {
     height: 100%;
     background-color: var(--bg-color) !important;
+    font-family: "Noto Sans", sans-serif;
 }
 
 main {
@@ -20,18 +23,22 @@ footer {
     padding-bottom: 20px;
 }
 
-a:link {
-    color:#808B88; text-decoration: none;
+a {
+    color: #fff !important;
+    &:link {
+        color:#808B88; text-decoration: none;
+    }
+    &:visited {
+        color: #808B88;; text-decoration: none;
+    }
+    &:hover {
+        color:#ffff; text-decoration: none;
+    }
+    &:active {
+        color:#7476b4; text-decoration: none;
+    }
 }
-a:visited {
-    color: #808B88;; text-decoration: none;
-}
-a:hover {
-    color:#ffff; text-decoration: none;
-}
-a:active {
-    color:#7476b4; text-decoration: none;
-}
+
 
 .btn-primary,
 .btn-primary:hover
@@ -56,7 +63,7 @@ a:active {
 }
 
 .kezdoH1 {
-    font-family: "PT Serif", serif;
+    font-family: "Noto Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
