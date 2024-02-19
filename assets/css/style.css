@@ -33,6 +33,14 @@ a:active {
     color:#7476b4; text-decoration: none;
 }
 
+.btn-primary,
+.btn-primary:hover
+.btn-primary:focus
+.btn-primary:active {
+    background-color: #808B88 !important;
+    border-color: #808B88 !important;
+    color: white;
+}
 /* custom scrollbar */
 ::-webkit-scrollbar {
     width: 7px;
