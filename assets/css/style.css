@@ -73,4 +73,13 @@ a {
 }
 .eler {
     font-size: larger;
+
+    }
+
+.oktatasSP {
+    background-color: #808B88;
+    color: #fff;
+    &:hover {
+        background-color: black;
+    }
 }
