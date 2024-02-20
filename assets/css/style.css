@@ -40,14 +40,17 @@ a:active {
 }
 
 
-.btn-primary,
-.btn-primary:hover
-.btn-primary:focus
-.btn-primary:active {
-    background-color: #808B88 !important;
-    border-color: #808B88 !important;
+.asd {
+    background-color: #808B88;
+    border-color: #808B88;
+    border: 1px;
     color: white;
 }
+.asd:hover {
+    background-color: var(--bg-color);
+    border-color: var(--bg-color);
+}
+
 /* custom scrollbar */
 ::-webkit-scrollbar {
     width: 7px;
