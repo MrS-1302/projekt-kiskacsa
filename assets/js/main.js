@@ -42,7 +42,7 @@ function httpGet(theUrl) {
 
 //ez cserélni <main> ben a tartalmat
 async function redirection(url, title) {
-    document.querySelector('main').innerHTML = '<div class="container">' + await httpGet(url) + '</div>'; //beszerzem az oldal tartalmát
+    document.querySelector('main').innerHTML = await httpGet(url); //beszerzem az oldal tartalmát
     document.title = 'Gábor Dénes Óvoda, Általánis Iskola, Gimnázium és Technikum | ' + title; //Be állítom a navét, hogy az mindehol más lehessen
     if (document.querySelector('.menu-btn')) document.querySelector('.menu-btn').click(); //Rákattintok az X re, hogy a menüt bezárjam
 }
