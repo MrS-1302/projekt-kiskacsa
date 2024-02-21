@@ -28,7 +28,8 @@ a {
     text-decoration: none;
 }
 a:link {
-    color:#808B88; 
+    color:#808B88;
+    text-decoration: none;
 }
 a:visited {
     color: #808B88;
