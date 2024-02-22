@@ -29,7 +29,6 @@ a {
 }
 a:link {
     color:#808B88;
-    text-decoration: none;
 }
 a:visited {
     color: #808B88;
@@ -88,4 +87,11 @@ a:active {
 .oktatasSP a:hover {
     background-color: #626967;
     color: #fff;
+}
+.kepek {
+    size: 75%;
+}
+
+.footera :link {
+    text-decoration: none;
 }
