@@ -46,3 +46,17 @@ async function redirection(url, title) {
     document.title = 'Gábor Dénes Óvoda, Általánis Iskola, Gimnázium és Technikum | ' + title; //Be állítom a navét, hogy az mindehol más lehessen
     if (document.querySelector('.menu-btn')) document.querySelector('.menu-btn').click(); //Rákattintok az X re, hogy a menüt bezárjam
 }
+
+function scrollspyJump(id) {
+    if (window.innerWidth >= 768) {
+        scrollHere = document.getElementById(id).offsetTop - document.querySelector('.stickedScrollspy').clientHeight;
+    } else {
+        scrollHere = document.getElementById(id).offsetTop - 10;
+    }
+    
+    window.scroll({
+        top: scrollHere, 
+        left: 0, 
+        behavior: 'smooth'
+    });
+}

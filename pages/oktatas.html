@@ -1,14 +1,30 @@
 <script src="/assets/js/checker.js"></script>
-<div class="row">
-    <div class="col-4">
-      <div id="list-example" class="list-group oktatasSP">
-        <a class="list-group-item list-group-item-action" href="#list-item-1">Óvoda</a>
-        <a class="list-group-item list-group-item-action" href="#list-item-2">Általános iskola</a>
-        <a class="list-group-item list-group-item-action" href="#list-item-3">Gimnázium</a>
-        <a class="list-group-item list-group-item-action" href="#list-item-4">Technikum</a>
+
+<div class="container">
+<div class="container stickedScrollspy">
+  <div class="row">
+    <div class="col-12 mb-4">
+      <div class="row scrollspy">
+        <a onclick="scrollspyJump('list-item-1')" class="col-12 col-md-3 py-2 text-center">
+          Óvoda
+        </a>
+        <a onclick="scrollspyJump('list-item-2')" class="col-12 col-md-3 py-2 text-center">
+          Általános iskola
+        </a>
+        <a onclick="scrollspyJump('list-item-3')" class="col-12 col-md-3 py-2 text-center">
+          Gimnázium
+        </a>
+        <a onclick="scrollspyJump('list-item-4')" class="col-12 col-md-3 py-2 text-center">
+          Technikum
+        </a>
       </div>
     </div>
-    <div class="col-8">
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
       <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
 
         <h4 id="list-item-1">Óvoda</h4>
@@ -42,7 +58,7 @@
             <li>Szeretnének továbbtanulni informatikai területen(mert ugye a technikusi végzés plusz pontokat ad az egyetemi vagy főiskolai felvételiknél)</li>
         </ul>
         <p>A technikum nyílt napokat tart, ahol a diákok és a szülők betekintést nyerhetnek az iskola életébe, és feltehetik kérdéseiket a képzéssel kapcsolatban. A nyílt napok időpontjáról az iskola honlapján tájékozódhatnak.</p>
-
-    </div>
     </div>
   </div>
+</div>
+</div>
