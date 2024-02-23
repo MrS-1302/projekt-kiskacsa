@@ -1,3 +1,7 @@
+.menuParent {
+  height: 0;
+}
+
 .menuParent .wrapper {
   position: fixed;
   top: 0;

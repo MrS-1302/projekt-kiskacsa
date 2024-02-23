@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     menu = document.createElement('div');
     menu.className = 'menuParent';
     menu.innerHTML = await httpGet('/pages/tpl/menu.html');
-    document.body.appendChild(menu);
+    document.body.prepend(menu)
 
     document.getElementById('active').addEventListener('change', async () => {
         docBody = document.body;
