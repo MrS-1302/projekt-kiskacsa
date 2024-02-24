@@ -53,10 +53,32 @@ function scrollspyJump(id) {
     } else {
         scrollHere = document.getElementById(id).offsetTop - 10;
     }
-    
+
     window.scroll({
         top: scrollHere, 
         left: 0, 
         behavior: 'smooth'
     });
 }
+
+let elozoAktiv = 1;
+window.addEventListener('wheel', function (scroll) {
+    if (document.getElementById('list-item-1')) {
+        let valtozatat = 0;
+        if (scroll.deltaY > 0) {
+            if (elozoAktiv < 4 && document.getElementById('list-item-' + (elozoAktiv + 1)).offsetTop - 236 < window.scrollY) {
+                valtozatat = 1;
+            }
+        } else {
+            if (elozoAktiv > 1 && document.getElementById('list-item-' + elozoAktiv).offsetTop > window.scrollY) {
+                valtozatat = -1;
+            }
+        }
+
+        if (valtozatat != 0) {
+            document.querySelector('.scrollspy a:nth-child(' + elozoAktiv + ')').classList.toggle('active');
+            document.querySelector('.scrollspy a:nth-child(' + (elozoAktiv + valtozatat) + ')').classList.toggle('active');
+        }
+        elozoAktiv += valtozatat;
+    }
+});
