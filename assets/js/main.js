@@ -9,6 +9,11 @@ window.addEventListener('DOMContentLoaded', async () => {
     menu.className = 'menuParent';
     menu.innerHTML = await httpGet('/pages/tpl/menu.html');
     document.body.prepend(menu)
+    
+    document.querySelector('.kepek').style.height = window.innerHeight + 'px';
+    window.addEventListener('resize', function(event) {
+        document.querySelector('.kepek').style.height = window.innerHeight + 'px';
+    }, true);
 
     document.getElementById('active').addEventListener('change', async () => {
         docBody = document.body;

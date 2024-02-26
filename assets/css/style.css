@@ -67,13 +67,16 @@ a:active {
 }
 /*+CSS*/
 .logo {
-    background-image: url(asssets/img/logo.png);
+    z-index: 2;
+    position: relative;
 }
 
 .kezdoH1 {
     font-family: "Noto Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
+    z-index: 2;
+    position: relative;
 }
 
 .felviD {
@@ -93,7 +96,23 @@ a:active {
     color: #fff;
 }
 .kepek {
-    size: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: -70px;
+    background-image: url("/assets/img/Photo 2024. 02. 21. 14 19 11.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.kepek:after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0; 
+    background: rgba(0,0,0,0.4);
+    pointer-events: none;
 }
 
 .footera :link {
