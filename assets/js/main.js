@@ -81,6 +81,12 @@ function scrollspyJump(id) {
 
 let elozoAktiv = 1;
 window.addEventListener('wheel', function (scroll) {
+    if (window.scrollY + scroll.deltaY < 100) {
+        document.querySelector('.menuParent .menu-btn').style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    } else {
+        document.querySelector('.menuParent .menu-btn').style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    }
+
     if (document.getElementById('list-item-1')) {
         let valtozatat = 0;
         if (scroll.deltaY > 0) {
