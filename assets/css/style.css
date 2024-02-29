@@ -31,9 +31,7 @@ a {
     color: #fff;
     text-decoration: none;
 }
-a:link {
-    color:#808B88;
-}
+
 a:visited {
     color: #808B88;
 }
@@ -45,7 +43,7 @@ a:active {
 }
 
 .redirection {
-    color: rgb(0, 67, 224);
+    color: #808B88;
     text-decoration: none;
     cursor: pointer;
 }
@@ -59,6 +57,7 @@ a:active {
     border-color: #808B88;
     border: 1px;
     color: white;
+    display: block;
 }
 .asd:hover {
     background-color: var(--bg-color);
