@@ -119,6 +119,14 @@ a:active {
     text-decoration: none;
 }
 
+.koszonto {
+    border: 1px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #181a19;
+    margin-top: -30px;
+    padding: 15px;
+}
 /* scrollspy */
 .scrollspy {
     background-color: white;
