@@ -60,10 +60,14 @@ async function redirection(url, title, menuClose = true) {
 
 function scrollspyJump(id) {
     if (window.innerWidth >= 768) {
-        scrollHere = document.getElementById(id).offsetTop - document.querySelector('.stickedScrollspy').clientHeight;
+        scrollHere = document.getElementById(id).offsetTop - document.querySelector('.stickedScrollspy').clientHeight + 10;
     } else {
         scrollHere = document.getElementById(id).offsetTop - 10;
     }
+
+    document.querySelector('.scrollspy a:nth-child(' + elozoAktiv + ')').classList.toggle('active');
+    elozoAktiv = parseInt(id.split('-')[2]);
+    document.querySelector('.scrollspy a:nth-child(' + elozoAktiv + ')').classList.toggle('active');
 
     window.scroll({
         top: scrollHere, 
