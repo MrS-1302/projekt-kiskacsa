@@ -10,9 +10,10 @@ window.addEventListener('DOMContentLoaded', async () => {
     menu.innerHTML = await httpGet('/pages/tpl/menu.html');
     document.body.prepend(menu)
     
-    document.querySelector('.kepek').style.height = window.innerHeight + 'px';
     window.addEventListener('resize', function(event) {
-        document.querySelector('.kepek').style.height = window.innerHeight + 'px';
+        if (document.title.split(' | ')[1] == 'Főoldal') {
+            document.querySelector('.kepek').style.height = window.innerHeight + 'px';
+        }
     }, true);
 
     document.getElementById('active').addEventListener('change', async () => {
@@ -46,10 +47,15 @@ function httpGet(theUrl) {
 }
 
 //ez cserélni <main> ben a tartalmat
-async function redirection(url, title) {
+async function redirection(url, title, menuClose = true) {
     document.querySelector('main').innerHTML = await httpGet(url); //beszerzem az oldal tartalmát
     document.title = 'Gábor Dénes Óvoda, Általánis Iskola, Gimnázium és Technikum | ' + title; //Be állítom a navét, hogy az mindehol más lehessen
-    if (document.querySelector('.menu-btn')) document.querySelector('.menu-btn').click(); //Rákattintok az X re, hogy a menüt bezárjam
+    
+    if (title == 'Főoldal') {
+        document.querySelector('.kepek').style.height = window.innerHeight + 'px';
+    }
+    
+    if (document.querySelector('.menu-btn') && menuClose) document.querySelector('.menu-btn').click(); //Rákattintok az X re, hogy a menüt bezárjam
 }
 
 function scrollspyJump(id) {
