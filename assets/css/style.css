@@ -137,8 +137,8 @@ a:active {
 
 }
 .kerdesek {
-    background-color: #181a19
-
+    background-color: #181a19;
+    height: 80%;
 }
 /* scrollspy */
 .scrollspy {
