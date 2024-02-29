@@ -1,3 +1,1 @@
-# projekt-kiskacsa
-
-alma meg pite
+# Kiskacsa csapat projekt feladata
