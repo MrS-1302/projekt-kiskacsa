@@ -128,6 +128,9 @@ a:active {
 .asd2 {
     border-left: solid 5px white;
 }
+span {
+    text-decoration: underline;
+}
 
 .koszontoParent {
     position: absolute;
