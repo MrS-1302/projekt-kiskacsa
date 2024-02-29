@@ -56,6 +56,11 @@ async function redirection(url, title, menuClose = true, plus = 0) {
     }
     if (plus != 0) {
         scrollspyJump('list-item-' + plus);
+    } else if (title == 'Oktatás' && plus == 0) {
+        window.scroll({
+            top: 0, 
+            left: 0
+        });
     }
     
     if (document.querySelector('.menu-btn') && menuClose) document.querySelector('.menu-btn').click(); //Rákattintok az X re, hogy a menüt bezárjam
