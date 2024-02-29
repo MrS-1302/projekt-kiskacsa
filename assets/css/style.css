@@ -118,7 +118,14 @@ a:active {
 .footera :link {
     text-decoration: none;
 }
-
+.asd1 {
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+}
+.asd2 {
+    text-align: center;
+}
 .koszonto {
     border: 1px;
     border-radius: 10px;
