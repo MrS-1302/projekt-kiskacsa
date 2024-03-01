@@ -46,6 +46,8 @@ function httpGet(theUrl) {
     });
 }
 
+let elozoAktiv = 1;
+
 //ez cserélni <main> ben a tartalmat
 async function redirection(url, title, menuClose = true, plus = 0) {
     document.querySelector('main').innerHTML = await httpGet(url); //beszerzem az oldal tartalmát
@@ -57,9 +59,14 @@ async function redirection(url, title, menuClose = true, plus = 0) {
     if (plus != 0) {
         scrollspyJump('list-item-' + plus);
     } else if (title == 'Oktatás' && plus == 0) {
+        elozoAktiv = 1;
+    }
+
+    if (plus == 0) {
         window.scroll({
             top: 0, 
-            left: 0
+            left: 0,
+            behavior: 'instant'
         });
     }
     
@@ -84,7 +91,6 @@ function scrollspyJump(id) {
     });
 }
 
-let elozoAktiv = 1;
 window.addEventListener('wheel', function (scroll) {
     if (window.scrollY + scroll.deltaY < 100) {
         document.querySelector('.menuParent .menu-btn').style.backgroundColor = 'rgba(0, 0, 0, 0)';
