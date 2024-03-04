@@ -108,8 +108,13 @@
   transform: translateX(100px);
 }
 
-.menuParent .wrapper div:hover {
+.menuParent .wrapper div:hover, .menuParent .wrapper a:hover {
   color: #fd7e14;
+}
+
+.menuParent .wrapper a {
+  text-decoration: none;
+  color: white;
 }
 
 .menuParent #active:checked ~ .wrapper div {
